@@ -28,14 +28,14 @@ return {
         defaults = {
           mappings = {
             i = {
-              ["<C-t>"] = open_in_tab,
-              ["<CR>"] = open_in_split,
-              ["<S-CR>"] = open_in_vsplit,
+              ["<CR>"] = open_in_tab,
+              ["<C-s>"] = open_in_split,
+              ["<C-v>"] = open_in_vsplit,
             },
             n = {
-              ["<C-t>"] = open_in_tab,
-              ["<CR>"] = open_in_split,
-              ["<S-CR>"] = open_in_vsplit,
+              ["<CR>"] = open_in_tab,
+              ["<C-s>"] = open_in_split,
+              ["<C-v>"] = open_in_vsplit,
             },
           },
         },
