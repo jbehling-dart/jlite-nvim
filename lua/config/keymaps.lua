@@ -42,7 +42,7 @@ end
 -- lsp functions
 -- LSP keymaps: Set up when an LSP attaches to a buffer
 M.lsp_on_attach = function(client, bufnr)
-  print(" LSP on_attach fired for " .. client.name)
+  -- print(" LSP on_attach fired for " .. client.name)
   -- Options used for all mappings: 
   -- 'buffer' makes the mapping local to the current LSP-attached buffer
   -- 'silent' and 'noremap' are standard good practices

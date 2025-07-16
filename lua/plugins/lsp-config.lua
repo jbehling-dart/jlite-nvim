@@ -24,6 +24,8 @@ return {
           "bashls",          -- Bash shell scripting
           "vimls",           -- Vim
           "marksman",        -- Markdown
+          "texlab",          -- LaTeX
+          --"asm_lsp",         -- Assembly 
         },
         automatic_installation = true,
       })
