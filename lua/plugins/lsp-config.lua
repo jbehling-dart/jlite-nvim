@@ -2,10 +2,12 @@ local keymaps      = require("config.keymaps")
 
 return {
   -- Core LSP client
-  { "neovim/nvim-lspconfig" },
+  { "neovim/nvim-lspconfig",
+    version = "*",
+  },
 
   -- Mason: Manages installation of LSP servers and other development tools
-  { "williamboman/mason.nvim", config = true },
+  { "williamboman/mason.nvim", version = "*", config = true },
 
   -- Connects Mason with the Neovim LSP client
   { "williamboman/mason-lspconfig.nvim",
@@ -33,7 +35,6 @@ return {
       })
 
       -- 3) Prepare capabilities and per-server overrides
-      -- Use the new API: vim.lsp.config replaces the deprecated framework
       local lspconfig = require("lspconfig")
       --local lspconfig = vim.lsp.config
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
