@@ -37,6 +37,7 @@ return {
                     ,"bash"
                     ,"c"
                     ,"cpp"
+                    ,"go"
                     ,"vim"
                     ,"markdown"
                     ,"vhdl"

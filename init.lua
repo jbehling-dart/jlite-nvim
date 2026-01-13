@@ -24,6 +24,19 @@ vim.filetype.add {
   },
 }
 
+-- Auto-reload files changed on disk
+vim.opt.autoread = true
+vim.opt.updatetime = 500  -- affects CursorHold; lower = more frequent checks
+
+-- Whenever you focus NVIM, switch buffers, or pause typing, check for file changes
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI", "TermClose", "TermLeave" }, {
+  callback = function()
+    if not vim.bo.modified then
+      vim.cmd("checktime")
+    end
+  end,
+})
+
 -- user keymaps
 require("config.keymaps")
 

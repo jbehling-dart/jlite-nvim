@@ -25,6 +25,7 @@ return {
           "vimls",           -- Vim
           "marksman",        -- Markdown
           "texlab",          -- LaTeX
+          "gopls",           -- golang 
           --"asm_lsp",         -- Assembly 
         },
         automatic_installation = true,
@@ -68,6 +69,17 @@ return {
               telemetry = {
                 enable = false, -- Disable data collection
               },
+            },
+          },
+        },
+        gopls = {
+          settings = {
+            gopls = {
+              analyses = {
+                unusedparams = true,
+                unreachable = true,
+              },
+              staticcheck = true,
             },
           },
         },
