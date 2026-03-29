@@ -58,21 +58,21 @@ return {
         },
       }
 
-      -- 4) Manually set up each LSP server
-      local servers = {
-        "pyright", "clangd", "vhdl_ls", "lua_ls", "rust_analyzer",
-        "cmake",   "bashls",  "vimls",    "marksman",   "texlab",   "gopls",
-      }
-      for _, name in ipairs(servers) do
-        local opts = {
-          on_attach    = keymaps.lsp_on_attach,
-          capabilities = capabilities,
-        }
-        if srv_overrides[name] then
-          opts = vim.tbl_deep_extend("force", opts, srv_overrides[name])
-        end
-        lspconfig[name].setup(opts)
-      end
+      -- -- 4) Manually set up each LSP server
+      -- local servers = {
+      --   "pyright", "clangd", "vhdl_ls", "lua_ls", "rust_analyzer",
+      --   "cmake",   "bashls",  "vimls",    "marksman",   "texlab",   "gopls",
+      -- }
+      -- for _, name in ipairs(servers) do
+      --   local opts = {
+      --     on_attach    = keymaps.lsp_on_attach,
+      --     capabilities = capabilities,
+      --   }
+      --   if srv_overrides[name] then
+      --     opts = vim.tbl_deep_extend("force", opts, srv_overrides[name])
+      --   end
+      --   lspconfig[name].setup(opts)
+      -- end
     end,
   },
 }

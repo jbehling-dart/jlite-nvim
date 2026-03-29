@@ -6,11 +6,16 @@ vim.g.maplocalleader = "\\"
 -- Basic Vim
 -- show line number
 vim.cmd("set number")
--- tabs are 4 spaces
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
+--  -- tabs are 4 spaces
+--  vim.cmd("set expandtab=true")
+--  vim.cmd("set tabstop=4")
+--  vim.cmd("set softtabstop=4")
+--  vim.cmd("set shiftwidth=4")
+--  
+vim.opt.expandtab = true   -- Use spaces instead of tabs
+vim.opt.shiftwidth = 4     -- Size of an indent
+vim.opt.softtabstop = 4    -- Number of spaces tabs count for while editing
+vim.opt.tabstop = 4        -- Number of spaces that a <Tab> in the file counts for
 
 -- ignore case in search unless using caps
 vim.cmd("set ignorecase")
